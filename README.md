@@ -24,6 +24,10 @@ Sistema web para gestión de reservas de restaurant desarrollado en Laravel 12 c
 - Composer 2.2+
 - Node.js y NPM
 
+## Versión de Laravel
+
+- Laravel 12
+
 ## Instalación
 
 ```bash

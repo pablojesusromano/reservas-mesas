@@ -20,7 +20,7 @@ Sistema web para gestión de reservas de restaurant desarrollado en Laravel 12 c
 
 ## Requisitos
 
-- PHP 8.2+ con las extensiones pdo_sqlite y sqlite3 descomentadas
+- PHP 8.2+ con las extensiones pdo_sqlite y sqlite3 descomentadas en el php.ini
 - Composer 2.2+
 - Node.js y NPM
 

@@ -21,7 +21,7 @@ Sistema web para gestión de reservas de restaurant desarrollado en Laravel 12 c
 ## Requisitos
 
 - PHP 8.2+
-- Composer
+- Composer 2.2+
 - Node.js y NPM
 - Laravel 12
 

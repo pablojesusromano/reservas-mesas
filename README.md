@@ -20,10 +20,9 @@ Sistema web para gestión de reservas de restaurant desarrollado en Laravel 12 c
 
 ## Requisitos
 
-- PHP 8.2+
+- PHP 8.2+ con las extensiones pdo_sqlite y sqlite3 descomentadas
 - Composer 2.2+
 - Node.js y NPM
-- Laravel 12
 
 ## Instalación
 
@@ -42,7 +41,10 @@ npm install
 cp .env.example .env
 php artisan key:generate
 
-# Crear base de datos y correr migraciones con datos de prueba
+# Crear base de datos y correr migraciones con datos de prueba 
+# IMPORTANTE: para correr este comando, asegurarse de descomentar las extensiones en el php.ini de su versión de PHP:
+# extension=pdo_sqlite
+# extension=sqlite3
 php artisan migrate:fresh --seed
 
 # Levantar servidores

@@ -29,7 +29,7 @@ Sistema web para gestión de reservas de restaurant desarrollado en Laravel 12 c
 
 ```bash
 # Clonar el repositorio
-git clone <url-del-repositorio>
+git clone https://github.com/pablojesusromano/reservas-mesas.git
 cd reservas-mesas
 
 # Instalar dependencias PHP

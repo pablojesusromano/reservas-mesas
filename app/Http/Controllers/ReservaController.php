@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreReservaRequest;
 use App\Models\Reserva;
 use App\Services\ReservaService;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ReservaController extends Controller
@@ -40,6 +41,24 @@ class ReservaController extends Controller
         return view('reservas.create');
     }
 
+    public function disponibilidad(Request $request)
+    {
+        $fecha = $request->query('fecha');
+        $horaInicio = $request->query('hora_inicio');
+
+        $disponibilidad = null;
+
+        if ($fecha && $horaInicio) {
+            $disponibilidad = $this->reservaService->consultarDisponibilidad($fecha, $horaInicio);
+        }
+
+        return view('reservas.disponibilidad', [
+            'disponibilidad' => $disponibilidad,
+            'fecha' => $fecha,
+            'horaInicio' => $horaInicio,
+        ]);
+    }
+
     public function store(StoreReservaRequest $request)
     {
         try {
@@ -61,3 +80,4 @@ class ReservaController extends Controller
         }
     }
 }
+

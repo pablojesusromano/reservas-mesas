@@ -10,6 +10,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
     
     Route::resource('mesas', MesaController::class);
+    Route::get('reservas/disponibilidad', [ReservaController::class, 'disponibilidad'])->name('reservas.disponibilidad');
     Route::resource('reservas', ReservaController::class);
 });
 

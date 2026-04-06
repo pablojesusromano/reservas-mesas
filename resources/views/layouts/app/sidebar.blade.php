@@ -15,6 +15,9 @@
                     <flux:sidebar.item icon="document-check" :href="route('reservas.index')" :current="request()->routeIs('reservas.index')" wire:navigate>
                         {{ __('Reservas') }}
                     </flux:sidebar.item>
+                    <flux:sidebar.item icon="calendar-days" :href="route('reservas.disponibilidad')" :current="request()->routeIs('reservas.disponibilidad')" wire:navigate>
+                        {{ __('Disponibilidad') }}
+                    </flux:sidebar.item>
                     <flux:sidebar.item icon="map-pin" :href="route('mesas.index')" :current="request()->routeIs('mesas.index')" wire:navigate>
                         {{ __('Mesas') }}
                     </flux:sidebar.item>
